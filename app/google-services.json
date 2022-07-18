@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "187277550208",
+    "project_id": "cafeteria-62ae3",
+    "storage_bucket": "cafeteria-62ae3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187277550208:android:ee14f4a9c86a285da9fc65",
+        "android_client_info": {
+          "package_name": "com.example.cafeteria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187277550208-f02pmee7klc3hqphes6l4ttip9n7obq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATJF30NOv6YYeFj9dBdoxm6admZ7wMiQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187277550208-f02pmee7klc3hqphes6l4ttip9n7obq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
