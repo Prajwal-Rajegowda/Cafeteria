@@ -16,12 +16,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     private Button register;
     private EditText email,Password;
     private Button SignIn;
 
+    FirebaseFirestore database = FirebaseFirestore.getInstance();
     private FirebaseAuth mAuth;
 
     @Override
@@ -87,7 +90,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(SignInActivity.this,MainActivity.class));
+                    String currentUser = Email;
+                    Bundle username = new Bundle();
+                    username.putString("key1",currentUser);
+                    Toast.makeText(getBaseContext(),"Welcome User",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SignInActivity.this,MainActivity.class).putExtras(username));
 
                 }
                 else{

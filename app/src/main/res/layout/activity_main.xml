@@ -20,11 +20,11 @@
 
     <ImageButton
         android:id="@+id/coffeeButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Coffee"
         android:scaleType="fitCenter"
-        style="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
@@ -35,11 +35,11 @@
 
     <ImageButton
         android:id="@+id/idliButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Idli Vada"
         android:scaleType="fitCenter"
-        style="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -50,10 +50,10 @@
 
     <ImageButton
         android:id="@+id/dosaButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Dosa"
-        style="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,10 +65,10 @@
 
     <ImageButton
         android:id="@+id/samosaButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Samosa"
-        style="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,11 +80,11 @@
 
     <ImageButton
         android:id="@+id/breadButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Bread Pakoda"
         android:scaleType="fitCenter"
-        style="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.909"
@@ -95,11 +95,11 @@
 
     <ImageButton
         android:id="@+id/cakeButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Cake"
         android:scaleType="fitCenter"
-        style="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -110,10 +110,10 @@
 
     <ImageButton
         android:id="@+id/paniButton"
+        style="?attr/selectableItemBackgroundBorderless"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Pani Puri"
-        style="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +135,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
+        app:layout_constraintVertical_bias="0.332" />
 
     <TextView
         android:id="@+id/textView2"
@@ -149,6 +149,22 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.461" />
+
+    <EditText
+        android:id="@+id/unameDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

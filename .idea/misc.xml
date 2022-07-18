@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_coffee.xml" value="0.33179487179487177" />
+        <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_dosa.xml" value="0.33179487179487177" />
+        <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_main.xml" value="0.33179487179487177" />
+        <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_order_summary.xml" value="0.33697916666666666" />
         <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_sign_in.xml" value="0.33697916666666666" />
         <entry key="..\:/Users/prajw/Documents/MAD lab mini project/Cafeteria/app/src/main/res/layout/activity_sign_up.xml" value="0.33697916666666666" />
         <entry key="..\:/Users/prajw/Documents/Mad Lab Mini Project/Cafeteria/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.235" />

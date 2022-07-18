@@ -1,10 +1,13 @@
 package com.example.cafeteria;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,13 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.FileInputStream;
 
@@ -30,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private TextView cafe;
     private EditText Fname,Usn,Email,Password;
 
+    FirebaseFirestore database = FirebaseFirestore.getInstance();
 
     private Button signup;
 
@@ -58,7 +67,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.SIGNUP:
                 RegisterUser();
 
-
         }
     }
 
@@ -67,6 +75,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         String name = Fname.getText().toString().trim();
         String usn = Usn.getText().toString().trim();
         String passwd = Password.getText().toString().trim();
+
+        Users user = new Users(email,name,usn);
+
 
         if (email.isEmpty()) {
             Email.setError("Email is Required");
@@ -100,6 +111,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
+        database.collection("Users").document(name).set(user);
 
         mAuth.createUserWithEmailAndPassword(email, passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
