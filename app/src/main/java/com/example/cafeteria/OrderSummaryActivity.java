@@ -5,10 +5,13 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,6 +22,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.List;
 import java.util.Map;
@@ -76,7 +80,6 @@ public class OrderSummaryActivity extends AppCompatActivity {
         String Uname = username.getString("key1","default");
 
         orderTotal = findViewById(R.id.orderTotal);
-
 
         DocumentReference docRef = database.collection("Orders").document(Uname);
 
@@ -158,6 +161,21 @@ public class OrderSummaryActivity extends AppCompatActivity {
                 } else {
                     Log.d("LOGGER", "get failed with ", task.getException());
                 }
+            }
+        });
+
+        placeOrder.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (Integer.parseInt((orderTotal.getText()+"")) != 0) {
+                    Intent mainpageIntent = new Intent(OrderSummaryActivity.this,MainActivity.class);
+                    Toast.makeText(getBaseContext(), "Hey ... Order is placed .. !!", Toast.LENGTH_LONG).show();
+                    database.collection("Orders").document(Uname).delete();
+                    mainpageIntent.putExtras(username);
+                    startActivity(mainpageIntent);
+                }
+                else
+                    Toast.makeText(getBaseContext(),"Please order something first ...!!",Toast.LENGTH_LONG).show();
             }
         });
 
