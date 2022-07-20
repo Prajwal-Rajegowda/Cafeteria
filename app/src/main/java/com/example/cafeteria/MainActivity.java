@@ -15,7 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton dosa,idli,coffee,cake,samosa,bread,pani;
+    ImageButton dosa,idli,coffee,cake,samosa,bread,pani, orderSummary;
     EditText unameDisp;
 
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         samosa = (ImageButton) findViewById(R.id.samosaButton);
         bread = (ImageButton) findViewById(R.id.breadButton);
         pani = (ImageButton) findViewById(R.id.paniButton);
+        orderSummary = findViewById(R.id.orderSummary);
 
         unameDisp = findViewById(R.id.unameDisp);
 
@@ -104,5 +105,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        orderSummary.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent orderPgAct = new Intent(MainActivity.this,OrderSummaryActivity.class);
+                orderPgAct.putExtras(username);
+                startActivity(orderPgAct);
+            }
+        });
     }
 }
