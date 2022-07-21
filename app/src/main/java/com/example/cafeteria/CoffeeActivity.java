@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -57,8 +58,12 @@ public class CoffeeActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View view)
-            {
-                nos-=1;
+            {   if(nos>0){
+                nos -= 1;
+            }
+            else {
+                nos=0;
+            }
                 coffeeNos.setText(String.valueOf(nos));
             }
         });
@@ -68,10 +73,14 @@ public class CoffeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                coffeeStore(nos,Uname);
-                Intent coffeeOrder = new Intent(CoffeeActivity.this,MainActivity.class);
-                coffeeOrder.putExtras(username);
-                startActivity(coffeeOrder);
+                if(nos>0)
+                {
+                    coffeeStore(nos,Uname);
+                    Intent coffeeOrder = new Intent(CoffeeActivity.this,MainActivity.class);
+                    coffeeOrder.putExtras(username);
+                    startActivity(coffeeOrder);
+                }
+                else Toast.makeText(getBaseContext(),"Add item before Ordering!", Toast.LENGTH_LONG).show();
             }
         });
 

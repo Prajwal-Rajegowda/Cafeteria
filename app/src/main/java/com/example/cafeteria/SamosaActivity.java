@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -59,7 +60,12 @@ public class SamosaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                nos-=1;
+                if(nos>0){
+                    nos -= 1;
+                }
+                else {
+                    nos=0;
+                }
                 samosaNos.setText(String.valueOf(nos));
             }
         });
@@ -69,10 +75,13 @@ public class SamosaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                samosaStore(nos,Uname);
-                Intent samosaOrder = new Intent(SamosaActivity.this,MainActivity.class);
-                samosaOrder.putExtras(username);
-                startActivity(samosaOrder);
+                if(nos>0) {
+                    samosaStore(nos, Uname);
+                    Intent samosaOrder = new Intent(SamosaActivity.this, MainActivity.class);
+                    samosaOrder.putExtras(username);
+                    startActivity(samosaOrder);
+                }
+                else Toast.makeText(getBaseContext(),"Add item before Ordering!", Toast.LENGTH_LONG).show();
             }
         });
 

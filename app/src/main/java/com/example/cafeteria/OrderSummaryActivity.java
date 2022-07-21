@@ -26,6 +26,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class OrderSummaryActivity extends AppCompatActivity {
 
@@ -168,9 +170,10 @@ public class OrderSummaryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Integer.parseInt((orderTotal.getText()+"")) != 0) {
+                    Toast.makeText(getBaseContext(), "Order is placed .. !!", Toast.LENGTH_LONG).show();
                     Intent mainpageIntent = new Intent(OrderSummaryActivity.this,MainActivity.class);
-                    Toast.makeText(getBaseContext(), "Hey ... Order is placed .. !!", Toast.LENGTH_LONG).show();
                     database.collection("Orders").document(Uname).delete();
+                    Toast.makeText(getBaseContext(), "Order is Delivered .. !!", Toast.LENGTH_LONG).show();
                     mainpageIntent.putExtras(username);
                     startActivity(mainpageIntent);
                 }

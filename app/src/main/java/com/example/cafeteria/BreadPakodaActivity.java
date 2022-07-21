@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -60,7 +61,13 @@ public class BreadPakodaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                nos-=1;
+                if(nos>0){
+                    nos-=1;
+
+                }
+                else{
+                    nos=0;
+                }
                 breadNos.setText(String.valueOf(nos));
             }
         });
@@ -70,10 +77,15 @@ public class BreadPakodaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                breadStore(nos,Uname);
-                Intent breadOrder = new Intent(BreadPakodaActivity.this,MainActivity.class);
-                breadOrder.putExtras(username);
-                startActivity(breadOrder);
+                if(nos>0)
+                {
+                    breadStore(nos,Uname);
+                    Intent breadOrder = new Intent(BreadPakodaActivity.this,MainActivity.class);
+                    breadOrder.putExtras(username);
+                    startActivity(breadOrder);
+                }
+                else Toast.makeText(getBaseContext(),"Add item before Ordering!", Toast.LENGTH_LONG).show();
+
             }
         });
 
