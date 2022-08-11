@@ -1,4 +1,5 @@
 # Cafeteria App ☕
+
 ## Table of Contents
 - [ Intro ](#Intro)
 - [ Language and IDE ](#Lang)
@@ -6,19 +7,23 @@
 - [ Further Enhancements ](#Enhance)
 - [ Snapshot Dump ](#Snap)
 - [ Credits ](#Credits)
+
 <a name = "Intro"></a>
 ## Intro
 The Cafeteria app aims to build a simple application for small scale hotels, restraunts etc. where they can receive orders from customers online instead of them waiting in a queue. This is specially useful in the COVID restriction senarios to ensure social distancing. 
 <br/><br/>
 This app was inspired by the thoughts of my friends and I about an app for our college canteen to take orders online. This was implemented as a mini project for my Lab course in college.
 <br/><br/>
+
 <a name = "Lang"></a>
 ## Language and IDE
 The app is written in Java using Android Studio IDE. The backend for the App is being implemented using Firebase.
 <br/><br/>
+
 <a name = "Note"></a>
 ## Note from the Authors
 My friends and I who are the authors for this application do acknowledge that there are 1000 more better ways of implementing this app 😁. But we believe that our attempt can help others draw inspiration and improve upon what we have done.
+
 <a name = "Enhance"></a>
 ## Further enhancements 
 We discovered that the following can be implemented as further enhancements : 
@@ -26,6 +31,7 @@ We discovered that the following can be implemented as further enhancements :
 - Order Prep and Delivery Status
 - Messaging and Email integration with invoice
 - UI Advancements and many more ...
+
 <a name = "Snap"></a>
 ## Snapshot Dump
 Here are some snapshots of the App :
@@ -41,6 +47,7 @@ Here are some snapshots of the App :
 ![Order Summary Page](https://user-images.githubusercontent.com/65915759/184121828-daa81399-d513-431d-81b5-87e8e1ada252.png)
 #### Firestore Snapshot
 ![Firestore Database Snapshot](https://user-images.githubusercontent.com/65915759/184121816-dce65140-3dae-497e-b0cb-c52f4960f223.png)
+
 <a name = "Credits"></a>
 ## Credits
 ##### Credits to Param S, Prajwal R and Rohan B from BNMIT CSE Dept. 2023 Batch
