@@ -14,8 +14,8 @@ My friends and I who are the authors for this application do acknowledge that th
 We discovered that the following can be implemented as further enhancements : 
 - Payment Gateway
 - Order Prep and Delivery Status
-- Messaing and Email integration with invoice
-- More UI Advancements and many more ...
+- Messaging and Email integration with invoice
+- UI Advancements and many more ...
 ## Snapshot Dump
 Here are some snapshots of the App :
 ### SignUp page
