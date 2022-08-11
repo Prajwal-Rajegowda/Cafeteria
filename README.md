@@ -1,6 +1,8 @@
 # Cafeteria App
-The Cafeteria app aims to build a simple application for small scale hotels, restraunts etc. where they can receive orders from customers online instead of them waiting in a queue. This is specially useful in the COVID restriction senarios to ensure social distancing. <br/>
+The Cafeteria app aims to build a simple application for small scale hotels, restraunts etc. where they can receive orders from customers online instead of them waiting in a queue. This is specially useful in the COVID restriction senarios to ensure social distancing. 
+<br/><br/>
 This app was inspired by the thoughts of my friends and I about an app for our college canteen to take orders online. This was implemented as a mini project for my Lab course in college.
+<br/><br/>
 The app is written in Java using Android Studio IDE. The backend for the App is being implemented using Firebase.
 Here are some snapshots of the App :
 ### SignUp page
