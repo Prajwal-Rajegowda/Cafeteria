@@ -43,4 +43,4 @@ Here are some snapshots of the App :
 ![Firestore Database Snapshot](https://user-images.githubusercontent.com/65915759/184121816-dce65140-3dae-497e-b0cb-c52f4960f223.png)
 <a name = "Credits"></a>
 ## Credits
-##### Credits to Param S, Prajwal R and Rohan B from BNMIT CSE Dept. 2019 Batch
+##### Credits to Param S, Prajwal R and Rohan B from BNMIT CSE Dept. 2023 Batch
